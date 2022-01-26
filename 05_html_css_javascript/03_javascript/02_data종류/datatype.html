@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	//1. 기본형
+	 console.log("수치(정수):", 20);
+	 console.log("수치(실수):", 3.14);
+	 
+	 console.log("문자(하나의 문자):", 'A', "A");
+	 console.log("문자(문자열):", 'ABC', "ABC");
+	 
+	 console.log("논리데이터:", true, false);
+	 console.log("undefined(초기화되지 않는상태)", undefined);
+	 console.log("null(값이 없음):", null);
+	 console.log("NaN(Not a Number):", NaN);
+	 
+	//2. 참조형
+     console.log("객체:(객체배열)", [10,20,30], ["a","b"], [10,"a"]);
+     console.log("객체:(JSON객체)", {"name":"홍길동","age":20});
+     
+     //ES6
+     class Person{
+    	 //생성자
+    	 constructor(name,age){
+			this.name = name;
+			this.age = age;
+		}
+     }
+     
+     var p = new Person("홍길동",20);
+     
+     console.log("클래스:", p.name, p.age);
+     console.log("함수(익명함수):", function(){});
+     
+ 	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	window.onload=function(){
+		console.log("head태그안에서 p태그:", document.getElementById("userid"));
+	};
+
+</script>
+</head>
+<body>
+	
+	<p id="userid">홍길동</p>
+
+	<script type="text/javascript">
+		console.log("body태그안에서 p태그 밑:", document.getElementById("userid"));
+	</script>
+</body>
+</html>
