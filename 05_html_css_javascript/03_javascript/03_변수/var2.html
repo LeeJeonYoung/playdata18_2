@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//var 키워드
+	
+	 //1. var은 변수명 중복 가능하다.
+     var num = 10;
+     var num = 20;
+     console.log("var:", num);
+     
+     
+     //2. 함수 scope
+     if(true){
+    	 var m = 20;
+    	 console.log("블럭안:",  m);
+     }
+     console.log("블럭밖:",  m);
+
+	  function fun(){
+		  var x = 10;
+		  console.log("fun:", x);
+	  }
+	  fun();
+	  //console.log(x);  //에러이유?
+			  
+	 console.log("/////////////////////")		  
+	 //3. 호이스팅 가능	
+	 
+	 
+	 console.log(n);
+	 var n = 10;
+	 console.log(n);
+	  
+			  
+			  
+			  
+			  
+     
+</script>
+     
+     
+     
+     
+     
+     
+</head>
+<body>
+
+</body>
+</html>

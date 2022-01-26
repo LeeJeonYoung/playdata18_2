@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//let 키워드 (ES6)
+	
+	 //1. let은 변수명 중복 안됨.
+	let num = 10;
+	//let num = 20;  //에러이유?
+	console.log("let:", num);
+	
+	 //2. 블럭scope
+    if(true){
+   	 let m = 20;
+   	 console.log("블럭안:",  m);
+    }
+    //console.log("블럭밖:",  m);  //에러이유?
+	
+     //3. 호이스팅 불가
+     //console.log(n);  //에러이유?
+	 let n = 10;
+	 console.log(n);		
+    		
+</script>
+</head>
+<body>
+	
+
+</body>
+</html>
