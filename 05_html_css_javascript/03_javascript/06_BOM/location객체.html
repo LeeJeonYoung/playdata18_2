@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// url  정보 
+	// Location 객체 => location 접근
+	// 자동생성하는 코드 추측:   var location  = new Location();
+	console.log(location);
+	console.log(location.host);
+	
+	//새로고침
+	function aaa(){
+		location.reload();
+	}
+	// daum
+	function bbb(){
+		location.href="http://www.daum.net";
+	}
+
+</script>
+</head>
+<body>
+<button onclick="aaa()">새로고침</button>
+<button onclick="bbb()">daum</button>
+</body>
+</html>
