@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	//1. default 파라미터
+	function f(n=10,n2=20){
+		console.log("f함수:", n, n2);
+	}
+	f();
+	f(1,2);
+	
+	//2. rest 파라미터
+	
+	function f2(n,n2=100, ...rest){
+		console.log("f2함수:", n, n2, rest);
+	}
+	
+	f2();
+	f2(1,2,3,4,5,6,7);
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

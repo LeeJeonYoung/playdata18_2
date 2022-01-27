@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	// 일급객체
+
+	function f() {
+		console.log("f함수");
+	}
+	f();
+	//1. 함수를 변수에 저장
+	var x = f;
+	x();
+	
+	//2. 함수를 임의의 함수 호출시 인자값으로 사용 가능
+	function f2(x){
+		x();
+	}
+	f2(f);  // 함수 f를 인자값으로 전달
+	
+	//3. 함수를 임의의 함수의 리턴값으로 사용가능
+	function f3(){
+		return f;  // 함수 f를 리턴값으로 사용
+	}
+	
+	var result = f3();
+	result();
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	// 기능에 따른 4가지 형태
+	
+	//1. 파라미터 없고 리턴값 없는 형태
+	function f() {
+		console.log("f함수");
+	}
+	f();
+	
+	//2. 파라미터 있고 리턴값 없는 형태
+	function f2(n,n2) {
+		console.log("f2함수",n , n2);
+	}
+	f2(1,2);
+	f2();
+	f2(1,2,3,4);
+	
+	//3. 파라미터 없고 리턴값 있는 형태
+	function f3() {
+		console.log("f3함수");
+		return 100;
+	}
+	var result = f3();
+	console.log("결과값:", result);
+	
+	//4. 파라미터 있고 리턴값 있는 형태
+	function f4(n,n2) {
+		console.log("f4함수",n,n2);
+		return n+n2;
+	}
+	var result = f4(1,2);
+	console.log("결과값:", result);
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
