@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	
+	//arrow함수
+	//1. 파라미터 없고 리턴 없음.
+	var f = function(){
+		console.log("f 함수");
+	};
+	
+	f();
+	
+	var f = ()=>{
+		console.log("arrow f 함수");
+	};
+	var f = ()=>console.log("arrow2 f 함수"); //단일문장이면 {} 생략.
+	f();
+	
+	//2.파라미터 있고 리턴 없음
+	var f2 = function(n){
+		console.log("f2 함수", n);
+	};
+	f2(10);
+	var f2 = (n)=>{
+		console.log("arrow f2 함수", n);
+	};
+	var f2 = n => console.log("arrow2 f2 함수", n);
+	f2(20);
+	
+	//4. 파라미터 있고 리턴 있음
+	var f4 = function(n,n2){
+		  return n+n2;
+	};
+	var result = f4(1,2);
+	console.log("result, f4:", result);
+	
+	var f4 = (n, n2)=> n+n2;
+	var result = f4(10,20);
+	console.log("arrow result, f4:", result);
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
