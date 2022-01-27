@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	//유틸리티 함수
+	//1.경고창
+	 //alert("hello");
+	
+	//2. prompt 
+//	 var mesg = prompt("이름입력");
+	// console.log(mesg);
+	
+	//3. setTimeout ==> 일정시간이 지나서 임의의 함수 호출, 단 한번 호출.
+	//setTimeout(함수, 3000);
+	
+	//가. 함수선언식
+	function f(){
+		console.log("f");
+	}
+	
+	//나. 함수 표현식
+	var f2 = function(){
+		console.log("f2");
+	};
+	
+	//다. arrow 함수
+	var f3 = ()=>console.log("f3");
+	
+	//setTimeout(f3, 3000); // 중요한점은 반드시 callback처리해야 된다. f() 안됨.
+	
+	//setTimeout(function(){
+	//	console.log("f2");
+	//}, 3000);
+	
+	//setTimeout(()=>console.log("f3"), 3000);
+	
+	
+	//4. setInternal ==> 일정시간이 지나서 임의의 함수 호출, 반복적으로 호출.
+	var time = setInterval(() => {
+		console.log("Hello");
+	}, 2000);
+	
+	setTimeout(function(){
+	    clearInterval(time);
+    }, 10000);
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
