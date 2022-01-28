@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+		//boolean 데이터 생성 ==> Boolean 
+		
+		console.dir(Boolean);
+		
+		var n = new Boolean(0);
+		console.log(n);
+		var n = new Boolean("");
+		console.log(n);
+		var n = new Boolean(NaN);
+		console.log(n);
+		var n = new Boolean(undefined);
+		console.log(n);
+		var n = new Boolean(null);
+		console.log(n);
+		
+		//나머지
+		var n = new Boolean(10);
+		console.log(n);
+		var n = new Boolean("false");
+		console.log(n);
+		var n = new Boolean([1,2,3]);
+		console.log(n);
+		
+		//toString()
+		var n = new Boolean(10);
+		console.log(n.toString()); // "true"
+		console.log(n.valueOf()); // true , 반드시 논리값 비교는 valueOf로 
+</script>
+</head>
+<body>
+
+</body>
+</html>

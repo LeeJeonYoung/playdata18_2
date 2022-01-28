@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	    //4. 부분배열  ,  arr.slice(start, end), end는 전까지
+		var arr = [9,8,7,6,5,4,3,2,1];
+		var sub = arr.slice(0,4);
+		console.log(sub);
+		
+		
+		//5. 중간삽입, 중간삭제 ,  arr.splice(start,삭제할갯수,[삽입할값,...])
+		/*
+		     삭제만: arr.splice(start, 삭제할 갯수)
+		     삽입만: arr.splice(start, 0, 값,값2,..)
+		     삽입및삭제: arr.splice(start, 삭제할 갯수, 값,값2,..)
+		   
+		*/
+		var arr =["A","B", 10, 20];
+		//arr.splice(0,2);  //삭제만
+		//arr.splice(0,0,"z",100); //삽입만
+		arr.splice(0,2,"z",100);   // 삭제와 삽입
+		console.log(arr);
+		
+		//6. 거꾸로, reverse()
+		var arr = [9,8,7,6,5,4,3,2,1];
+		arr.reverse();
+		console.log(arr);
+		
+		//7. 정렬. sort() =>정수값을 비교하지 않고 내부적으로 유니코드(문자)로 비교
+		var arr = [19,8,97,456,5,49,36,2,1];   
+		//arr.sort();
+		arr.sort(function(n,n2){
+			//return n-n2;  //오름차순
+			return n2-n;    //내림차순
+		});
+		
+		console.log(arr);
+		
+		//8. join ==> 파이썬에도 존재
+		var arr = ["A","B","C"];
+		console.log("join:", arr.join( " 와 " ));
+		
+		//9. 반복문
+		var arr = ["A","B","C"];
+		
+		for(var i=0; i<arr.length;i++){
+			console.log(">>", arr[i]);
+		}
+		for(var i of arr){
+			console.log("##", i);
+		}
+		for(var i in arr){
+			console.log("**", i, arr[i]);
+		}
+		
+		arr.forEach(function(v,i,a){
+			console.log("%%", v, i, a);
+		});
+		
+		//10. entries
+		var arr = ["A","B","C"];
+		var entry = arr.entries();
+		console.log(entry);
+		//for(var s of entry){
+		//	console.log(s);
+		//}
+		for(var [k,v] of entry){ // 객체분해할당 문법(destructuring, ES6)
+			console.log(k,v);
+		}
+		
+		
+</script>
+</head>
+<body>
+
+</body>
+</html>

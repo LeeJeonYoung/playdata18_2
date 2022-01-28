@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+		//수치데이터 생성 ==> Number
+		
+		console.dir(Number);
+		
+	  	var n = 10;
+	  	
+	  	// 10 --> "10"
+	  	console.log("toString():",  n.toString()); //"10"
+	  	console.log("toString(2):",  n.toString(2)); // "1010"
+	  	console.log("toString(8):",  n.toString(8)); // "12"
+	  	console.log("toString(16):",  n.toString(16)); // "a"
+	  	
+	  	// "10" --> 10
+	  	console.log("Number.parseInt()", Number.parseInt("10")+2);
+	  	
+	  	// NaN
+	  	var result = Number.parseInt("Hello");
+	  	console.log("NaN:",result, Number.isNaN(result));
+	  	
+	  	// toFixed([자릿수]) ==> 실수값에 자릿수 지정 또는 정수로 변경
+	  	var x = 15.765;
+	  	console.log("정수로:", x.toFixed());
+	  	console.log("소수점 2자리:", x.toFixed(2));
+	  	console.log("소수점 5자리:", x.toFixed(5));
+	  	
+	  	console.log(Number.isInteger(10));
+	  	console.log(Number.isInteger("helo"));
+	  	console.log(Number.isInteger(true));	
+</script>
+</head>
+<body>
+
+</body>
+</html>
