@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	
+	//이벤트 객체
+	 function ok_click(){
+		console.log(event);
+		console.log(event.target); // DOM 접근
+		console.log(""+event.target.innerText); // DOM 접근
+		console.log(""+event.target.innerHTML); // DOM 접근
+		event.target.disabled=true;
+		event.target.innerText="Cancel";
+	}
+</script>
+</head>
+<body>
+<button onclick="ok_click()">ok클릭1</button><br>
+
+</body>
+</html>

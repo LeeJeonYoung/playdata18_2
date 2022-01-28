@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	
+	//이벤트 객체
+	function login_submit(){
+		console.log("login_submit");
+		//조건체크
+		return false;
+	}
+	
+	function login_submit_prevent(){
+		console.log("login_submit_prevent");
+		//조건체크
+		event.preventDefault();
+	}
+</script>
+</head>
+<body>
+<h1>1. return false/true</h1>
+<form action="http://www.daum.net" onsubmit="return login_submit();">
+  id:<input type="text" name="userid"><br>
+  <input type="submit" value="로그인">
+</form>
+
+<h1>2. event.preventDefault()</h1>
+<form action="http://www.daum.net" onsubmit="login_submit_prevent();">
+  id:<input type="text" name="userid"><br>
+  <input type="submit" value="로그인">
+</form>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

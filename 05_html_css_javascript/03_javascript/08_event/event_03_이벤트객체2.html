@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	
+	//이벤트 객체
+	 function ok_click(){
+		console.log(event);
+		console.log(event.target.value);
+	}
+</script>
+</head>
+<body>
+<select onchange="ok_click()">
+  <option value="A1">A1</option>
+  <option value="A2">A2</option>
+  <option value="A3">A3</option>
+</select>
+</body>
+</html>

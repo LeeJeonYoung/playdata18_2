@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	 //이벤트 핸들러
+	 function ok_click(n,n2=999,...rest){
+		 console.log("ok",n,n2,rest);
+	 }
+	 
+</script>
+</head>
+<body>
+<button onclick="ok_click(100)">ok클릭1</button><br>
+<button onclick="ok_click('a',200)">ok클릭2</button><br>
+<button onclick="ok_click('a',200,4,4,5,6)">ok클릭3</button><br>
+</body>
+</html>
