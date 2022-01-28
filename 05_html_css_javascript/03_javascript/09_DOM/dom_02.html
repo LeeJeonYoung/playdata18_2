@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function press(){
+		console.dir(document);
+		
+		var xxx = document.querySelectorAll("input:checked");
+		console.dir(xxx);
+		var str = "";
+		for(var x of xxx){
+			str += x.value+" "
+		}
+		console.log(str);
+		document.querySelector("#result").innerText = str;
+		str = "";
+	}
+</script>
+</head>
+<body>
+
+사과:<input type="checkbox" name="fruit" value="사과"><br>
+배:<input type="checkbox" name="fruit" value="배"><br>
+바나나:<input type="checkbox" name="fruit" value="바나나"><br>
+<button onclick="press()">체크된값만 출력</button>
+<div>
+결과값:<span id="result"></span>
+</div>
+</body>
+</html>
+
+
+

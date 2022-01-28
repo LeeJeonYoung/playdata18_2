@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function press(){
+		console.dir(document);
+		/*
+			id로 찾기:  document.getElementById("아이디값");
+		*/
+		var xxx = document.getElementById("userid");
+		console.dir(xxx);
+		console.log(xxx.value);
+		
+		/*
+		  tag명로 찾기;  document.getElementsByTagName("태그명")
+		*/
+		var yyy = document.getElementsByTagName("input");
+		console.log(yyy);
+		console.log(yyy[0].value);  //배열
+		
+		// 모든 선택자를 사용 가능한 메서드 지원됨.
+		/*
+		      var a = document.querySelector("css선택자");  //단일값 반환
+		      
+		      var a2 = document.querySelectorAll("css선택자");  //배열 반환
+		*/
+		
+		var a = document.querySelector("#userid");
+		console.log(a);
+		console.log(a.value);
+		
+		var a2 = document.querySelector(".xyz");
+		console.log(a2);
+		
+		var a3 = document.querySelectorAll(".xyz");
+		console.log(a3);
+		console.log(a3[0].value);
+	}
+</script>
+</head>
+<body>
+
+아이디:<input type="text" name="userid" id="userid" class="xyz"><br>
+
+<button onclick="press()">아이디값 출력</button>
+</body>
+</html>
+
+
+

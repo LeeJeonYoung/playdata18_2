@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function press(){
+		console.log("press");
+		var xxx = document.querySelector("#chk");
+		console.dir(xxx);
+		console.log(xxx.checked);
+		if(xxx.checked){
+			document.querySelector("#address2").value = 
+				document.querySelector("#address").value; 
+		}else{
+			document.querySelector("#address2").value = "";
+		}
+	}
+</script>
+</head>
+<body>
+
+회원주소:
+<input type="text" name="address" value="서울시" id="address"><br>
+동일하면체크하시오<input type="checkbox" name="sameaddress" id="chk" onchange="press()"><br>
+배송지주소
+<input type="text" name="address2" id="address2"><br>
+
+</body>
+</html>
+
+
+
