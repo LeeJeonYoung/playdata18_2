@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	 //2. JSON객체분해할당
+	 
+	 //가. 이전방식
+	 var json = {name:"홍길동",age:20};
+	 console.log(json.name, json.age);
+	 var key = "name";
+	 console.log(json[key], json["age"]);  //연관배열, 변수사용 가능 , 중요하다.
+	 
+	 //나. 객체분해할당
+	
+	 var {name,age}={name:"홍길동",age:20};
+	 console.log(name,age);
+	 
+	 var {name,age2}={name:"홍길동",age:20};
+	 console.log(name,age2);
+	 
+	 var {name,age2=10}={name:"홍길동",age:20};
+	 console.log(name,age2);
+	 
+	 //변수명 변경
+	 var username,userage;
+	 var {name:username,age:userage} = {name:"홍길동",age:20};
+	 console.log(username,userage);
+</script>
+</head>
+<body>
+
+</body>
+</html>
