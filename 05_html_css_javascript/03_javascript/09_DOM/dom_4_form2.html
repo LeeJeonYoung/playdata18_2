@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	function del(){
+		var f = document.querySelector("form");
+		console.dir(f);
+		//event.preventDefault();
+		f.method="get";
+		f.action="delete.html";
+		f.submit();
+	}
+	function sel(){
+		var f = document.querySelector("form");
+		console.dir(f);
+		//event.preventDefault();
+		f.method="post";
+		f.action="select.html";
+		f.submit();
+	}
+	function type_button(){
+		var f = document.querySelector("form");
+		console.dir(f);
+		//event.preventDefault();
+		f.action="target.html";
+		f.submit();
+	}
+</script>
+</head>
+<body>
+<h2>1. 폼데이터 처리- 자동으로 submit방지하는 방법</h2>
+<form>
+id:<input type="text" name="userid" id="userid"><br>
+   <button onclick="del()">삭제</button>
+   <button onclick="sel()">조회</button>
+   <input type="button" value="로그인3" onclick="type_button()">
+</form>
+</body>
+</html>
+
+
+

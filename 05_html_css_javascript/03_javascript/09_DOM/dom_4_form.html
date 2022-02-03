@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function validate_check(){
+		var id = document.querySelector("#userid").value;
+		if(id.length==0){
+			alert("id값은 필수입니다.")
+			event.preventDefault();
+		}
+	}
+</script>
+</head>
+<body>
+<h2>1. 폼데이터 처리- 자동으로 submit방지하는 방법</h2>
+<form action="target.html" method="get" onsubmit="validate_check()">
+id:<input type="text" name="userid" id="userid"><br>
+   <input type="submit" value="로그인1">
+   <button>로그인2</button>
+   <input type="button" value="로그인3">
+</form>
+</body>
+</html>
+
+
+
