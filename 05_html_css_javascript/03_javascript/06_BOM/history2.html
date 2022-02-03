@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function prev() {
+		history.back();
+	}
+	function home() {
+		history.go(-2); // back 2번
+	}
+</script>
+</head>
+<body>
+	<h1>history2 화면</h1>
+	<button onclick="prev()">이전화면</button>
+	<button onclick="home()">메인화면</button>
+</body>
+</html>
