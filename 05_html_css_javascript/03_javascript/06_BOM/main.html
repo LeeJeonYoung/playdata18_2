@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+   var childWin;
+	function check(){
+		childWin = window.open("child.html","자식창이름","width=300,height=300");
+	}
+</script>
+</head>
+<body>
+<h1>main.html</h1>
+id:<input type="text" name="userid" id="userid">
+<button onclick="check()">중복체크</button>
+</body>
+</html>

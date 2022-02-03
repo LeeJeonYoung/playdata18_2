@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function validate(){
+		console.log("validate");
+		window.close();
+		
+		var id = window.document.querySelector("#userid").value;
+		opener.document.querySelector("#userid").value=id;
+		
+	}
+
+// 가정: id값이 admin이면 중복됨. 아니면 사용가능함.
+	function check(){
+		var id = document.querySelector("#userid").value;
+		var mesg = "";
+		if(id == 'admin'){
+			mesg = "아이디 중복"
+		}else{
+			mesg ="<a href='javascript:validate()'>사용가능</a>";
+		}
+		document.querySelector("#result").innerHTML=mesg;
+	}
+</script>
+</head>
+<body>
+<h1>child.html</h1>
+userid:<input type="text" name="userid" id="userid">
+<button onclick="check()">확인</button>
+<div id="result"></div>
+</body>
+</html>
