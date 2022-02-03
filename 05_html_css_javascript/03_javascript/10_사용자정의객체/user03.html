@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+		//3.사용자 정의 객체 ==> JSON 객체
+		var username= "이순신";
+		var age = 20;
+		// 다음표현식은 front-end에서 무지막지하게 많이 사용된다.
+		var user={
+			username, //username:username 동일
+			age,     // age:age와 동일
+			getUsername(){
+				return this.username;
+			}, //메서드
+			getAge(){
+				return this.age;
+			},
+			setUsername(name){
+				this.username = name;
+			},
+			setAge(age){
+				this.age=age;
+			}
+		};
+		
+		console.log(user.username, user.getUsername());
+		console.log(user.age, user.getAge());
+</script>
+</head>
+<body>
+
+</body>
+</html>

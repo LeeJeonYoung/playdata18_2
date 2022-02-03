@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+		//4.사용자 정의 객체 ==> JSON 객체
+		//가.  key값을 동적으로 설정 가능 ==> [변수명]:값
+		/*
+		   예>
+		      var sports = {sport01:"야구",sport02:"농구", ... }
+		      var sports = {play01:"야구",play02:"농구", ... }
+		*/
+		// 다음표현식은 front-end에서 무지막지하게 많이 사용된다.
+		
+		var key_name="play";
+		    
+		var sports ={[key_name+"01"]:"야구",[key_name+"02"]:"농구"};
+		console.log(sports);
+		   
+		//나.  "{key:value}"  <==> {key:value}  간 변환 작업
+		
+		//1) {key:value} ==> "{key:value}",  [10,20]==>"[10,20]"
+		
+		var json_arr = [10,20,30];
+		var json_str = JSON.stringify(json_arr);  // "[10,20,30]"로 변경
+		console.log(json_str, typeof json_str, typeof json_arr);
+		
+		//2) "{key:value}" ==> {key:value},  "[10,20]" ==> [10,20]
+		 var json_object = JSON.parse(json_str); // [10,20,30]로 변경
+		 console.log(json_object, typeof json_object);
+		 
+		 /////////////////////////////////////////////
+		 var json_object = {name:"홍길동",age:20};
+		 var json_str = JSON.stringify(json_object);
+		 console.log(json_str, typeof json_str);
+		 var json_object2 = JSON.parse(json_str);
+		 console.log(json_object2, typeof json_object2);
+		/////////////////////////////////////////////
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+

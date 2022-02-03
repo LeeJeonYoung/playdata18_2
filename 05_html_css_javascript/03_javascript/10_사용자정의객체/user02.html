@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+		//2.사용자 정의 객체 ==> JSON 객체
+		var user={
+			username:"이순신",
+			age:20,
+			getUsername:function(){
+				return this.username;
+			}, //메서드
+			getAge(){
+				return this.age;
+			},
+			setUsername(name){
+				this.username = name;
+			},
+			setAge(age){
+				this.age=age;
+			}
+		};
+		
+		//값변경
+		user.age=30;
+		user.setAge(40);
+		console.log(user.username, user.getUsername());
+		console.log(user.age, user.getAge());
+</script>
+</head>
+<body>
+
+</body>
+</html>
