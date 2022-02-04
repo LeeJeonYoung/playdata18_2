@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="module" src="a.js"></script>
+<script type="module" src="b.js"></script>
+<script type="module">
+      import {num,fun} from './a.js';
+	  import {Person,fun2} from './b.js';
+
+      console.log(num);
+      fun();
+
+		fun2();
+		var p = new Person();
+</script>
+</head>
+<body>
+
+</body>
+</html>
