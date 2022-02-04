@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//Ajax 담당: XMLHttpRequest 객체
+	
+	var httpRequest;
+	function req(dt){
+		httpRequest = new XMLHttpRequest();
+		//요청시 응답처리하는 함수 호출
+		httpRequest.onreadystatechange=responseFun;
+		
+		if(event.keyCode == 13){ // enter 키값이 13 ( 외울것)
+		var url = `http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=3d430a039fb1bae3fe5f0bc48df64e46&targetDt=${dt}`;
+		console.log(url);
+		httpRequest.open("get",url,true);  // open("get|post",타켓, true|false); true:비동기, false:동기
+		httpRequest.send(null);  // get방식이면 null지정
+		}
+	}	
+	function responseFun(){
+	    if(httpRequest.readyState==4 && httpRequest.status == 200){
+	    	var data = httpRequest.responseText;
+	    	var json = JSON.parse(data);
+	    	var html =`<table border="1">`;
+	    	 html+=`<tr>
+	               <th>랭킹</th>
+	               <th>영화명</th>
+	               <th>개봉일</th>
+	             </tr>`;
+			 json.boxOfficeResult.dailyBoxOfficeList.forEach(function(boxoffice,idx,arr){
+	    		     html+=`<tr>
+	    		               <td>${boxoffice.rank}</td>
+	    		               <td>${boxoffice.movieNm}</td>
+	    		               <td>${boxoffice.openDt}</td>
+	    		             </tr>`  
+			 });
+	    	    html +=`</table>`;
+	    	document.querySelector("#result").innerHTML=html; 
+	    
+	    }
+	}
+</script>
+</head>
+<body>
+    <h1>박스 오피스</h1>
+    <input type="text" name="dt" id="dt" onkeyup="req(this.value)">
+	<div id="result"></div>
+
+
+</body>
+</html>
+
+
