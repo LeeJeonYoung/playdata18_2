@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//Ajax 담당: XMLHttpRequest 객체
+	
+	var httpRequest;
+	function req(){
+		httpRequest = new XMLHttpRequest();
+		console.dir(httpRequest);
+		
+		//요청시 응답처리하는 함수 호출
+		httpRequest.onreadystatechange=responseFun;
+
+		httpRequest.open("get","a6.jsp",true);  // open("get|post",타켓, true|false); true:비동기, false:동기
+		httpRequest.send(null);  // get방식이면 null지정
+	}	
+
+	function responseFun(){
+	    if(httpRequest.readyState==4 && httpRequest.status == 200){
+	    	var data = httpRequest.responseXML;
+	    	console.log(data, typeof data);
+	    	
+	    	
+	    	var personList= data.querySelectorAll("person");
+	    	var nameList = data.querySelectorAll("name");
+	    	var ageList = data.querySelectorAll("age");
+	    	var addressList = data.querySelectorAll("address");
+	 
+	    	 var data="";
+			 for(var i=0 ; i< personList.length; i++){
+				 data +=(nameList[i].innerHTML+"\t"+ageList[i].innerHTML+"\t"+addressList[i].innerHTML+"<br>")
+			 }
+			 console.log(data);
+				document.querySelector("#result").innerHTML=data;		 
+
+	    }//end if
+	}//end responseFun
+
+</script>
+</head>
+<body>
+	<button onclick="req()">요청</button>
+	<div id="result"></div>
+
+
+</body>
+</html>
+
+
