@@ -7,27 +7,26 @@
 
 	class Person{
 	
+		//인스턴스 메서드
 		setName(name){
-			this.name = name; // name은 로컬변수, this.name은 인스턴스 변수
+			this.username = name; // name은 로컬변수, this.name은 인스턴스 변수
 		}
 		getName(){
-			return this.name;
+			return this.username;
 		}
-		setAge(age){
-			this.age = age;
+		
+		static getInfo(){
+			return this.username; //자바였으며 에러, 자바스크립트는 undefined
 		}
-		getAge(){
-			return this.age;
-		}
+		
 		
 	}
 	
+	console.log(Person.getInfo());
+	
 	var p = new Person();
 	p.setName("홍길동");
-	p.age = 20;
-	
-	console.log(p.name, p.getName());
-	console.log(p.age, p.getAge());
+	console.log(p.getName());
 	
 	
 </script>
