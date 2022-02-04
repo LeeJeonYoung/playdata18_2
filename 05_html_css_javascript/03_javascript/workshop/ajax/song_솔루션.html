@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+ 
+     var xmlRequest = null;
+     function req(e){
+    	 e.preventDefault();
+    	 xmlRequest = new XMLHttpRequest();
+    	 xmlRequest.onreadystatechange=callFunction;
+    	 xmlRequest.open("get","song.xml",true);//비동기
+    	 xmlRequest.send(null); // get방식
+     }//end req
+     function callFunction(){
+    	 //정상적으로 실행된 경우
+        if(xmlRequest.readyState==4 && xmlRequest.status==200){
+           var xml = xmlRequest.responseXML;
+		   var mp3 = xml.querySelectorAll("mp3");
+		   var title = xml.querySelectorAll("title");
+		   var artist = xml.querySelectorAll("artist");
+		   var album = xml.querySelectorAll("album");
+		   var year = xml.querySelectorAll("year");
+		   var genre = xml.querySelectorAll("genre");
+		   var track = xml.querySelectorAll("track");
+        console.log(xml);
+        // 여러분들은 백틱으로 작성하세요.
+			var tableData="<table border='1'>";
+			  tableData +="<tr><th>mp3</th><th>title</th><th>artist</th><th>album</th><th>year</th><th>genre</th><th>track</th></tr>"
+        	for(var i = 0 ; i < mp3.length ; i++){
+          		tableData +="<tr>";
+        		tableData +="<td>kdb:"+mp3[i].getAttribute("kbs")+" size:"+mp3[i].getAttribute("size")+"</td>";
+        		tableData +="<td>"+title[i].innerHTML+"</td>";
+        		tableData +="<td>"+artist[i].innerHTML+"</td>";
+        		tableData +="<td>"+album[i].innerHTML+"</td>";
+        		tableData +="<td>"+year[i].innerHTML+"</td>";
+        		tableData +="<td>"+genre[i].innerHTML+"</td>";
+        		tableData +="<td>"+track[i].innerHTML+"</td>";
+        		tableData +="</tr>";
+        	}
+        	tableData +="<table>";
+        	
+        	document.getElementById("result").innerHTML = tableData;
+		   
+        }
+     }
+</script>
+</head>
+<body>
+<form>
+ <button onclick="req(event)">요청</button>
+ <span id="result"></span>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
