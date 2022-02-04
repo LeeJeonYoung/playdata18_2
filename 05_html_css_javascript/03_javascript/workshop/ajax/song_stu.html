@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+ 
+     var xmlRequest = null;
+     function req(e){
+    	 e.preventDefault();
+    	 xmlRequest = new XMLHttpRequest();
+    	 xmlRequest.onreadystatechange=callFunction;
+    	 xmlRequest.open("get","song.xml",true);//비동기
+    	 xmlRequest.send(null); // get방식
+     }//end req
+     function callFunction(){
+        if(xmlRequest.readyState==4 && xmlRequest.status==200){
+        
+		    /*
+		        구현
+		    
+		    */
+        	
+        	
+        }//end if
+     }//end callFunction
+</script>
+</head>
+<body>
+<form>
+ <button onclick="req(event)">요청</button>
+ <span id="result"></span>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
