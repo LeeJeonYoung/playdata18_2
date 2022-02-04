@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	//부모 클래스
+	class Pet{
+		constructor(name,age){
+			this.name = name;
+			this.age = age;
+		}
+		info(){
+			return this.name+" " + this.age;
+		}
+	}//end Pet
+	
+	class Cat extends Pet{
+		constructor(name, age, color){
+			super(name,age);
+			this.color = color;
+		}
+		// 오버라이딩 
+		info(){
+			return this.name+" " + this.age +" " + this.color;
+		}
+	}
+	
+	var c = new Cat("나비",2,"블랙");
+	console.log(c.info());
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

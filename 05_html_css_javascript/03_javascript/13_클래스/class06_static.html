@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	class Person{
+	
+		setName(name){
+			this.name = name; // name은 로컬변수, this.name은 인스턴스 변수
+		}
+		getName(){
+			return this.name;
+		}
+		setAge(age){
+			this.age = age;
+		}
+		getAge(){
+			return this.age;
+		}
+		
+	}
+	
+	var p = new Person();
+	p.setName("홍길동");
+	p.age = 20;
+	
+	console.log(p.name, p.getName());
+	console.log(p.age, p.getAge());
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
