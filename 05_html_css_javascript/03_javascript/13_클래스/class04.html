@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	let xxx = "setName";
+	class Person{
+		//생성자, 단 한번만 사용가능
+		constructor(name, age){
+			this.name = name;
+			this.age = age;
+		}
+		set [xxx](name){
+			this.name = name; // name은 로컬변수, this.name은 인스턴스 변수
+		}
+		get getName(){
+			return this.name;
+		}
+		set setAge(age){
+			this.age = age;
+		}
+		get getAge(){
+			return this.age;
+		}
+	}
+	
+	var p = new Person("이순신",44);
+	p.setName="홍길동";
+	p.setAge = 20;
+	
+	console.log(p.name, p.getName);
+	console.log(p.age, p.getAge);
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
