@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <table width="100%" cellspacing="0" cellpadding="0">
 	<tr>
 		<td height="30">
@@ -61,10 +63,6 @@
 								</tr>
 							</table>
 						</td>
-false
-  					
-
-
 						<td>
 							<table style='padding:15px'>
 								<tr>
@@ -106,7 +104,6 @@ false
 								</tr>
 							</table>
 						</td>
-false
   					
 
 
@@ -151,7 +148,7 @@ false
 								</tr>
 							</table>
 						</td>
-false
+
   					
 
 
@@ -196,7 +193,7 @@ false
 								</tr>
 							</table>
 						</td>
-true
+
   					
   					
   						
@@ -248,7 +245,7 @@ true
 								</tr>
 							</table>
 						</td>
-false
+
   					
 
 
@@ -293,7 +290,7 @@ false
 								</tr>
 							</table>
 						</td>
-false
+
   					
 
 
@@ -338,7 +335,7 @@ false
 								</tr>
 							</table>
 						</td>
-false
+
   					
 
 
@@ -383,7 +380,7 @@ false
 								</tr>
 							</table>
 						</td>
-true
+
   					
   					
   						
@@ -435,7 +432,7 @@ true
 								</tr>
 							</table>
 						</td>
-false
+
   					
 
 
@@ -480,7 +477,7 @@ false
 								</tr>
 							</table>
 						</td>
-false
+
   					
 
 
@@ -525,7 +522,7 @@ false
 								</tr>
 							</table>
 						</td>
-false
+
   					
 
 
@@ -570,7 +567,7 @@ false
 								</tr>
 							</table>
 						</td>
-true
+
   					
   					
   						
